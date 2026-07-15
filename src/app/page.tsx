@@ -1,9 +1,8 @@
 
 export default function PageHome() {
   return (
-      <main>
+      <main className="text-text" >
           Home
       </main>
-
   );
 }
