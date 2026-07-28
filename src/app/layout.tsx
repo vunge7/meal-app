@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import {Nunito} from "next/font/google";
+import { Nunito } from "next/font/google";
 
 
 import "./globals.css";
-import { Header } from "../components/header/Header";
+import { Header } from "../components/shared/header/Header";
+import { Content } from "../components/shared/content/Content"
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -12,8 +13,8 @@ const nunito = Nunito({
 
 
 export const metadata: Metadata = {
-  title: "CodarSe - Os melhores cursos de programção gratuito",
-  description: "Os melhores cursos de programção gratuito",
+  title: "Muse",
+  description: "A melhor refeição do país encontre aqui.",
 };
 
 
@@ -28,9 +29,12 @@ export default function RootLayout({
       className={nunito.className}
     >
       <body className="min-h-full flex flex-col">
+        <div className="flex justify-center mb-2">
+          imagem
+        </div>
         <Header />
-        {children}
-        </body>
+        <Content className="w-full">{children}</Content>
+      </body>
     </html>
   );
 }

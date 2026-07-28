@@ -1,20 +1,23 @@
 @import "tailwindcss";
 
-@theme  {
-    --color-text: #ffffff;
-    --color-error:#980000;
-    --color-paper:#232323;
-    --color-primary:#009688;
-    --color-background:#000000;
-    --color-primary-contrast: #ffffff;
+@theme {
+  --color-background: #5071E2;          /* Creme muito suave (fundo descansativo) */
+  --color-paper: #FFFFFF;               /* Branco puro para cards/modais */
+  --color-text: #1C1917;                /* Grafite bem escuro para leitura perfeita */
+  --color-text-secondary: #78716C;      /* Cinza médio para descrições de pratos */
+  
+  --color-primary: #FFB103;             /* Terracota / Laranja queimado (abre o apetite) */
+  --color-primary-contrast: #000;    /* Texto dentro de botões primários */
+  
+  --color-accent: #EAB308;              /* Dourado/Amarelo para destaques ou badges */
+  --color-error: #DC2626;               /* Vermelho de erro */
 }
 
 html,
-body{
-    @apply bg-background text-text w-screen h-screen underline-offset-4;
+body {
+  @apply bg-background text-text min-h-screen antialiased;
 }
 
-
-a{
-    @apply hover:underline;
+a {
+  @apply hover:underline;
 }
