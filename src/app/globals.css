@@ -1,21 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #5071E2;          /* Creme muito suave (fundo descansativo) */
-  --color-paper: #FFFFFF;               /* Branco puro para cards/modais */
-  --color-text: #1C1917;                /* Grafite bem escuro para leitura perfeita */
-  --color-text-secondary: #78716C;      /* Cinza médio para descrições de pratos */
-  
-  --color-primary: #FFB103;             /* Terracota / Laranja queimado (abre o apetite) */
-  --color-primary-contrast: #000;    /* Texto dentro de botões primários */
-  
-  --color-accent: #EAB308;              /* Dourado/Amarelo para destaques ou badges */
-  --color-error: #DC2626;               /* Vermelho de erro */
+  /* Cores extraídas da imagem enviada */
+  --color-background: #5071E2;          /* Azul (1º bloco) */
+  --color-primary: #FFB103;             /* Amarelo/Laranja (2º bloco) */
+  --color-text: #000000;                /* Preto (3º bloco) */
+
+  /* Suporte e contraste */
+  --color-paper: #FFFFFF;               /* Branco para os cards */
+  --color-primary-contrast: #000000;    /* Cor do texto em cima do amarelo */
 }
 
 html,
 body {
-  @apply bg-background text-text min-h-screen antialiased;
+  @apply bg-background/60 text-text min-h-screen antialiased;
 }
 
 a {

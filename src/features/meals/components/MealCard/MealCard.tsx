@@ -17,6 +17,13 @@ export const MealCard = ({
     price,
     imageUrl = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop", // Imagem padrão
 }: MealProps) => {
+
+
+    const onDetails = (title)=>{
+
+        alert(title);
+    }
+
     return (
         <section className="w-full max-w-4xl">
             <article
@@ -35,7 +42,7 @@ export const MealCard = ({
                         />
 
                         {/* Sombra escura na imagem para garantir a leitura da tag */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/20 to-transparent" />
 
                         {/* Badge Chef Special (Texto claro mantido aqui) */}
                         <div className="relative z-10 flex h-full items-end">
@@ -51,7 +58,7 @@ export const MealCard = ({
                         <div className="space-y-3">
                             <div className="flex flex-wrap items-center justify-between gap-3">
                                 {/* TÍTULO CORRIGIDO: Era text-background (claro), agora text-primary (escuro) */}
-                                <h2 className="text-2xl font-extrabold tracking-tight text-primary">
+                                <h2 className="text-2xl font-extrabold tracking-tight text-black">
                                     {title}
                                 </h2>
 
@@ -71,15 +78,16 @@ export const MealCard = ({
                         <div className="flex items-center justify-between gap-4 border-t border-primary/10 pt-4">
                             <div className="flex items-baseline gap-1">
                                 {/* PREÇO CORRIGIDO: Era text-background (claro), agora text-primary (escuro) */}
-                                <strong className="text-3xl font-black text-primary">{price}</strong>
+                                <strong className="text-3xl font-black text-black">{price}</strong>
                                 {/* MOEDA CORRIGIDA: Era text-white/70 (claro), agora text-primary/70 (escuro) */}
-                                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-primary/70">
+                                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-black/70">
                                     KZ
                                 </span>
                             </div>
 
                             {/* BOTÃO VER DETALHES CORRIGIDO: Invertido para Fundo Escuro e Texto Claro */}
                             <button
+                                onClick={(e)=>{e.preventDefault(); onDetails(title);}}
                                 className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-contrast transition-colors hover:bg-primary/90">
                                 Ver detalhes
                             </button>
