@@ -28,7 +28,7 @@ export default function PageMeals() {
   const totalMeals = categories.reduce((acc, cat) => acc + cat.meals.length, 0);
 
   return (
-    <div className="w-full space-y-8 max-w-4xl mx-auto pb-10">
+    <div className="w-full space-y-8 max-w-4xl mx-auto  my-40 pb-10">
       {/* Cabeçalho Principal da Página */}
       <div className="flex flex-col gap-1 px-1">
         <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-primary">

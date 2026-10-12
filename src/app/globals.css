@@ -2,9 +2,9 @@
 
 @theme {
   /* Cores extraídas da imagem enviada */
-  --color-background: #5071E2;          /* Azul (1º bloco) */
-  --color-primary: #FFB103;             /* Amarelo/Laranja (2º bloco) */
-  --color-text: #000000;                /* Preto (3º bloco) */
+  --color-background: #161b2e;         
+  --color-primary: #FFB103;            
+  --color-text: #000000;               
 
   /* Suporte e contraste */
   --color-paper: #FFFFFF;               /* Branco para os cards */
@@ -13,7 +13,7 @@
 
 html,
 body {
-  @apply bg-background/60 text-text min-h-screen antialiased;
+  @apply bg-background text-text min-h-screen antialiased;
 }
 
 a {
