@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cores extraídas da imagem enviada */
+  --color-background: #161b2e;         
+  --color-primary: #FFB103;            
+  --color-text: #000000;               
+
+  /* Suporte e contraste */
+  --color-paper: #FFFFFF;               /* Branco para os cards */
+  --color-primary-contrast: #000000;    /* Cor do texto em cima do amarelo */
+}
+
+html,
+body {
+  @apply bg-background text-text min-h-screen antialiased;
+}
+
+a {
+  @apply hover:underline;
+}
